@@ -1,0 +1,35 @@
+import kotlin.random.Random
+
+fun main() 
+{
+    val numGenerado = Random.nextInt(1, 30)
+    var intento: Int? = null
+
+    println("Intenta adivinar un numero del 1-30:")
+
+    while (intento != numGeneado) 
+    {
+        print("Escribe tu número: ")
+        
+        val input = readLine()
+
+        intento = input?.toIntOrNull()
+        
+        if (intento == null) 
+        {
+            println("Ese no es un numero")
+            continue
+        }
+
+        if (intento == numGeneado) 
+        {
+            println(" Adivinaste el número secreto $numeroSecreto")
+            
+        } 
+        
+        else 
+        {
+            println("No es el número, intenta otra vez")
+        }
+    }
+}
